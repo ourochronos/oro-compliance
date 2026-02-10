@@ -1,4 +1,4 @@
-# oro-compliance
+# our-compliance
 
 GDPR/PII compliance module for the ourochronos ecosystem.
 
@@ -11,13 +11,13 @@ GDPR/PII compliance module for the ourochronos ecosystem.
 ## Installation
 
 ```bash
-pip install oro-compliance
+pip install our-compliance
 ```
 
 ## Usage
 
 ```python
-from oro_compliance import delete_user_data, scan_for_pii, DeletionReason
+from our_compliance import delete_user_data, scan_for_pii, DeletionReason
 
 # Scan text for PII
 matches = scan_for_pii("Contact me at user@example.com")

@@ -9,7 +9,7 @@ Verifies:
 
 from __future__ import annotations
 
-from oro_compliance.pii_scanner import (
+from our_compliance.pii_scanner import (
     ClassificationLevel,
     PIIScanner,
     PIIType,

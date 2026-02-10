@@ -1,4 +1,4 @@
-"""Shared test fixtures for oro-compliance."""
+"""Shared test fixtures for our-compliance."""
 
 import pytest
 

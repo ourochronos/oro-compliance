@@ -25,7 +25,7 @@ test-all:
 	pytest tests/ -v
 
 coverage:
-	pytest tests/ --cov=src/oro_compliance --cov-report=html -m "not integration and not slow"
+	pytest tests/ --cov=src/our_compliance --cov-report=html -m "not integration and not slow"
 
 clean:
 	rm -rf build/ dist/ *.egg-info src/*.egg-info .pytest_cache .mypy_cache htmlcov .coverage

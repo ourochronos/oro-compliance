@@ -20,7 +20,7 @@ from enum import StrEnum
 from typing import Any
 from uuid import UUID, uuid4
 
-from oro_db import get_cursor
+from our_db import get_cursor
 
 logger = logging.getLogger(__name__)
 

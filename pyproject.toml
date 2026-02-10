@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "oro-compliance"
+name = "our-compliance"
 version = "0.1.0"
 description = "GDPR/PII compliance module for the ourochronos ecosystem"
 readme = "README.md"
@@ -20,7 +20,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
 ]
 dependencies = [
-    "oro-db>=0.1.0",
+    "our-db>=0.1.0",
 ]
 
 [project.optional-dependencies]
@@ -35,7 +35,7 @@ dev = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/oro_compliance"]
+packages = ["src/our_compliance"]
 
 [tool.ruff]
 target-version = "py311"
@@ -46,7 +46,7 @@ src = ["src", "tests"]
 select = ["E", "F", "I", "N", "W", "UP", "B", "C4"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["oro_compliance"]
+known-first-party = ["our_compliance"]
 
 [tool.mypy]
 python_version = "3.11"
@@ -56,7 +56,7 @@ warn_redundant_casts = true
 warn_unused_ignores = true
 
 [[tool.mypy.overrides]]
-module = "oro_db.*"
+module = "our_db.*"
 ignore_missing_imports = true
 follow_untyped_imports = true
 
@@ -71,7 +71,7 @@ markers = [
 
 [tool.coverage.run]
 branch = true
-source = ["src/oro_compliance"]
+source = ["src/our_compliance"]
 
 [tool.coverage.report]
 show_missing = true

@@ -14,7 +14,7 @@ from uuid import uuid4
 
 import pytest
 
-from oro_compliance.deletion import (
+from our_compliance.deletion import (
     DeletionReason,
     DeletionResult,
     Tombstone,
@@ -169,7 +169,7 @@ class TestTombstoneCreation:
     @pytest.fixture
     def mock_cursor(self):
         """Mock database cursor."""
-        with patch("oro_compliance.deletion.get_cursor") as mock:
+        with patch("our_compliance.deletion.get_cursor") as mock:
             cursor = MagicMock()
             mock.return_value.__enter__ = MagicMock(return_value=cursor)
             mock.return_value.__exit__ = MagicMock(return_value=False)
@@ -214,7 +214,7 @@ class TestCryptographicErasure:
     @pytest.fixture
     def mock_cursor(self):
         """Mock database cursor."""
-        with patch("oro_compliance.deletion.get_cursor") as mock:
+        with patch("our_compliance.deletion.get_cursor") as mock:
             cursor = MagicMock()
             mock.return_value.__enter__ = MagicMock(return_value=cursor)
             mock.return_value.__exit__ = MagicMock(return_value=False)
@@ -252,10 +252,10 @@ class TestUserDataDeletion:
     def mock_all_db(self):
         """Mock all database operations."""
         with (
-            patch("oro_compliance.deletion.get_cursor") as mock_cursor,
-            patch("oro_compliance.deletion.create_tombstone") as mock_tombstone,
-            patch("oro_compliance.deletion.perform_cryptographic_erasure") as mock_erasure,
-            patch("oro_compliance.deletion._start_tombstone_propagation") as mock_propagate,
+            patch("our_compliance.deletion.get_cursor") as mock_cursor,
+            patch("our_compliance.deletion.create_tombstone") as mock_tombstone,
+            patch("our_compliance.deletion.perform_cryptographic_erasure") as mock_erasure,
+            patch("our_compliance.deletion._start_tombstone_propagation") as mock_propagate,
         ):
             cursor = MagicMock()
             mock_cursor.return_value.__enter__ = MagicMock(return_value=cursor)
@@ -317,7 +317,7 @@ class TestDeletionVerification:
     @pytest.fixture
     def mock_cursor(self):
         """Mock database cursor."""
-        with patch("oro_compliance.deletion.get_cursor") as mock:
+        with patch("our_compliance.deletion.get_cursor") as mock:
             cursor = MagicMock()
             mock.return_value.__enter__ = MagicMock(return_value=cursor)
             mock.return_value.__exit__ = MagicMock(return_value=False)
